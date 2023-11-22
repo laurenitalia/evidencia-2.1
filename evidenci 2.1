@@ -1,0 +1,29 @@
+class Persona:
+    def __init__(self, nombre, edad, genero):
+        self.nombre = nombre
+        self.edad = edad
+        self.genero = genero
+
+    @property
+    def informacion(self):
+        return f"{self.nombre} tiene {self.edad} años y es de género {self.genero}."
+
+    def cumpleanos(self):
+        self.edad += 1
+        print(f"Feliz cumpleaños, {self.nombre}! Ahora tienes {self.edad} años.")
+
+# Uso de la clase
+# Crear una instancia de Persona
+persona1 = Persona("Juan", 25, "Masculino")
+
+# Acceder a los atributos
+print(f"Nombre: {persona1.nombre}")
+print(f"Edad: {persona1.edad}")
+print(f"Género: {persona1.genero}")
+
+# Llamar al método informacion
+print(persona1.informacion)
+
+# Llamar al método cumpleanos
+persona1.cumpleanos()
+print(persona1.informacion)
